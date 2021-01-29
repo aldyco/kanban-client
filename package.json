@@ -19,10 +19,12 @@
   "dependencies": {
     "axios": "^0.21.1",
     "vue": "^2.6.12",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-socket.io": "^3.0.10"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
+    "cssnano": "^4.1.10",
     "vue-template-compiler": "^2.6.12"
   }
 }

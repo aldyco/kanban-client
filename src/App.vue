@@ -107,6 +107,7 @@
 
            modal.toggle()
            this.fetchKanban()
+           this.$socket.emit('updateKanban')
          })
          .catch(err => {
            err.response.data.errors.forEach(error => this.showErrorOnAdd(error))
@@ -132,6 +133,7 @@
 
            modal.toggle()
            this.fetchKanban()
+           this.$socket.emit('updateKanban')
          })
          .catch(err => {
            this.showErrorOnDetails(err.response.data.message)
@@ -154,6 +156,7 @@
 
            modal.toggle()
            this.fetchKanban()
+           this.$socket.emit('updateKanban')
          })
          .catch(err => {
            this.showErrorOnDetails(err.response.data.message)
@@ -179,6 +182,7 @@
            modal.toggle()
 
            this.fetchKanban()
+           this.$socket.emit('updateKanban')
          })
          .catch(err => {
            this.showErrorOnDetails(err.response.data.message)
@@ -214,6 +218,12 @@
        this.fetchKanban()
      }
    },
+   sockets: {
+     updateKanban: function () {
+       /* console.log('updateKanban') */
+       this.fetchKanban()
+     },
+   }
  }
 
 </script>
